@@ -11,7 +11,7 @@ function SignIn({handleLogin}) {
         e.preventDefault();
         
         try {
-            const response = await fetch('https://movies-api-beige.vercel.app///signin', {
+            const response = await fetch('https://movies-api-beige.vercel.app/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
