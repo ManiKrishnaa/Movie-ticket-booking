@@ -11,7 +11,7 @@ function SignIn({handleLogin}) {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:5000/signin', {
+            const response = await fetch('https://movie-ticket-booking-6jpv.vercel.app//signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
