@@ -22,7 +22,7 @@ app.use(cors(
 ));
         
 
-mongoose.connect('mongodb://localhost:2701/moviebooking')
+mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mongodb.net/?retryWrites=true&w=majority&appName=nani/moviebooking')
 .then(()=>{
     console.log("mongodb connected !");
 })
