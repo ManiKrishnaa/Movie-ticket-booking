@@ -20,7 +20,7 @@ function Signup() {
       return;
     }
     try {
-      const response = await fetch('https://movies-api-beige.vercel.app/signup', {
+      const response = await fetch('https://movie-ticket-booking-s1mx.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
