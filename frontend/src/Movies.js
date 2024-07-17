@@ -9,7 +9,7 @@ function Movies({ selectedcity }) {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('https://movie-ticket-booking-s1mx.onrender.com/movies/${selectedcity}`);
+        const response = await axios.get('https://movie-api-rosy.vercel.app/movies/${selectedcity}`);
         setMovies(response.data.movies);
       } catch (error) {
         console.error('Error fetching movies:', error);
