@@ -195,6 +195,7 @@ app.post('/movies/seating/booking', async(req, res) => {
       }
 });
 
-app.listen(5000,()=>{
-    console.log("server running at port 5000 ");
-})
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
