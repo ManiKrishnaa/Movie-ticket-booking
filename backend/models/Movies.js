@@ -11,4 +11,4 @@ const movieSchema = new mongoose.Schema({
     posterUrl: {type:String,required:true},
 });
 
-module.exports = mongoose.model('Movie',movieSchema)
+module.exports = mongoose.model('Movies',movieSchema)
