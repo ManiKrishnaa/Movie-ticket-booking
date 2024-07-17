@@ -13,13 +13,13 @@ const moment = require("moment");
 
 const secretKey = "Movie_booking00124123124";
 
-app.use(cors(
-    {
-        origin : {"https://movie-ticket-booking-eight.vercel.app"},
-        methods : {"POST","GET"},
-        allowedHeaders: ['Content-Type', 'Authorization']
-    }
-));
+const app = express()
+
+app.use(cors({
+  origin: 'https://movie-ticket-booking-eight.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.options('*', cors({
   origin: 'https://movie-ticket-booking-eight.vercel.app',
@@ -36,7 +36,6 @@ mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mon
     console.log("error while connecting to database !");
 });
 
-const app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
