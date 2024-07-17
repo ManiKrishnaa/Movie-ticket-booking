@@ -14,7 +14,7 @@ function MovieDetails() {
     const fetchMovieDetails = async () => {
       console.log(`Fetching movie details for id: ${id}`);
       try {
-        const response = await axios.get(`https://movies-api-beige.vercel.app/moviess/${id}`);
+        const response = await axios.get(`https://movie-ticket-booking-s1mx.onrender.com/moviess/${id}`);
         console.log('Response data:', response.data);
         if (response.data.movie) {
           setMovieDetails(response.data.movie);
@@ -56,7 +56,7 @@ function MovieDetails() {
     try {
       const encodedTheater = encodeURIComponent(theater.trim());
       const encodedDate = encodeURIComponent(date.trim());
-      const response = await axios.get(`https://movies-api-beige.vercel.app/movies/${id}/${encodedTheater}/${showtime}/${encodedDate}`);
+      const response = await axios.get(`https://movie-ticket-booking-s1mx.onrender.com/movies/${id}/${encodedTheater}/${showtime}/${encodedDate}`);
       const data = response.data.seatingData;
       localStorage.setItem('seatings', JSON.stringify(data));
       window.location.reload();
