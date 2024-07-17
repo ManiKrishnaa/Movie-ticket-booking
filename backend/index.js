@@ -16,8 +16,7 @@ const secretKey = "Movie_booking00124123124";
 app.use(cors(
     {
         origin : {"https://movie-ticket-booking-eight.vercel.app"},
-        methods : {"POST","GET"},
-        credintials : true
+        methods : {"POST","GET"}
     }
 ));
         
