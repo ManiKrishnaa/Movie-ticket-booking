@@ -13,7 +13,16 @@ const moment = require("moment");
 
 const secretKey = "Movie_booking00124123124";
 
-mongoose.connect('mongodb://localhost:27017/moviebooking')
+app.use(cors(
+    {
+        origin : {"https://movie-ticket-booking-eight.vercel.app"},
+        methods : {"POST","GET"},
+        credintials : true
+    }
+));
+        
+
+mongoose.connect('mongodb://localhost:2701/moviebooking')
 .then(()=>{
     console.log("mongodb connected !");
 })
