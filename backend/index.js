@@ -15,19 +15,6 @@ const secretKey = "Movie_booking00124123124";
 
 const app = express()
 
-app.use(cors({
-  origin: 'https://movie-api-rosy.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-app.options('*', cors({
-  origin: 'https://movie-ticket-booking-eight.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-
 mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mongodb.net/?retryWrites=true&w=majority&appName=nani')
 .then(()=>{
     console.log("mongodb connected !");
@@ -38,7 +25,16 @@ mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mon
 
 
 app.use(bodyParser.json())
-app.use(cors())
+
+app.use(cors({
+  origin: 'https://movie-ticket-booking-eight.vercel.app', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
+}));
+
+// Handle preflight requests for all routes
+app.options('*', cors());
+
 app.use(express.json());
 
 app.post('/signup',async(req,res)=>{
