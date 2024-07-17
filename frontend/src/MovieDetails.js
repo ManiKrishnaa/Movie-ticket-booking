@@ -56,7 +56,7 @@ function MovieDetails() {
     try {
       const encodedTheater = encodeURIComponent(theater.trim());
       const encodedDate = encodeURIComponent(date.trim());
-      const response = await axios.get(`http://movie-api-rosy.vercel.app/movies/${id}/${encodedTheater}/${showtime}/${encodedDate}`);
+      const response = await axios.get(`https://movie-api-rosy.vercel.app/movies/${id}/${encodedTheater}/${showtime}/${encodedDate}`);
       const data = response.data.seatingData;
       localStorage.setItem('seatings', JSON.stringify(data));
       window.location.reload();
