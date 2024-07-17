@@ -5,14 +5,12 @@ import './styles/Movies.css';
 
 function Movies({ selectedcity }) {
   const [movies, setMovies] = useState([]);
-  const [cityy, setCityy] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get('https://movie-api-rosy.vercel.app/movies/${selectedcity}');
         setMovies(response.data.movies);
-        setCityy(response.data.cityy);
       } catch (error) {
         console.error('Error fetching movies:', error);
       }
@@ -29,7 +27,6 @@ function Movies({ selectedcity }) {
     <div className="movie-container">
       <h1>Available movies in {selectedcity}</h1>
       <div className="movie-cards">
-        {cityy}
         {movies.map(movie => (
           <Link to={`/movies/${movie._id}`} key={movie._id} className="movie-card" onClick={() => handleMovieClick(movie._id)} >
             <img src={movie.posterUrl} alt={movie.title} className="movie-poster" />
