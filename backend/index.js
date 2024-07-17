@@ -80,7 +80,8 @@ app.get('/movies/:city', async (req, res) => {
     try {
         const city = req.params.city;
         const movies = await moviemodel.find({ city: city });
-        res.json({ movies , city});
+        console.log(movies);
+        res.json({movies});
     } catch (error) {
         console.error('Error fetching movies:', error);
         res.status(500).json({ error: 'Internal Server Error' });
@@ -195,7 +196,6 @@ app.post('/movies/seating/booking', async(req, res) => {
       }
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+app.listen(5000,()=>{
+    console.log("server running at port 5000 ");
+})
