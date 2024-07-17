@@ -79,7 +79,7 @@ app.get('/cities',async(req,res)=>{
 app.get('/movies/:city', async (req, res) => {
     try {
         const city = req.params.city;
-        const movies = await moviemodel.findOne({ city: city });
+        const movies = await moviemodel.find({ city: city });
         res.json({ movies , city});
     } catch (error) {
         console.error('Error fetching movies:', error);
