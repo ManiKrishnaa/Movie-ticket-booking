@@ -11,7 +11,7 @@ function SignIn({handleLogin}) {
         e.preventDefault();
         
         try {
-            const response = await fetch('https://movie-api-rosy.vercel.app/signin', {
+            const response = await fetch('http://movie-api-rosy.vercel.app/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
