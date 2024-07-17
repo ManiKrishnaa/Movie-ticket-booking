@@ -11,7 +11,7 @@ function SignIn({handleLogin}) {
         e.preventDefault();
         
         try {
-            const response = await fetch('https://movie-ticket-booking-s1mx.onrender.com/signin', {
+            const response = await fetch('https://movie-api-rosy.vercel.app/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
