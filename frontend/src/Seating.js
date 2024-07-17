@@ -41,7 +41,7 @@ function Seating({ seatingDataString }) {
       const email = userdata.email;
   
       try {
-        const response = await axios.post('https://movies-api-beige.vercel.app/movies/seating/booking', {
+        const response = await axios.post('https://movie-ticket-booking-s1mx.onrender.com/movies/seating/booking', {
             seatNumber: seatNumber,
             movieName: seatingData.movieName,
             showtime: showtime,
