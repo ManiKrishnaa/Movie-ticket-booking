@@ -80,7 +80,7 @@ app.get('/movies/:city', async (req, res) => {
     try {
         const city = req.params.city;
         const movies = await moviemodel.find({ city: city });
-        res.json({ movies });
+        res.json({ movies , city});
     } catch (error) {
         console.error('Error fetching movies:', error);
         res.status(500).json({ error: 'Internal Server Error' });
