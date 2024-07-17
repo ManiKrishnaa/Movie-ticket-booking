@@ -15,7 +15,7 @@ const secretKey = "Movie_booking00124123124";
 
 const app = express()
 
-mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mongodb.net/?retryWrites=true&w=majority&appName=nani',{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mongodb.net/?retryWrites=true&w=majority&appName=nani/Movie-bookings',{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("mongodb connected !");
 })
