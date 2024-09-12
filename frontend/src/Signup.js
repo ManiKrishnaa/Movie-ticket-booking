@@ -20,7 +20,7 @@ function Signup() {
       return;
     }
     try {
-      const response = await fetch('https://movie-api-rosy.vercel.app/signup', {
+      const response = await fetch('https://movie-ticket-booking-gold.vercel.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
