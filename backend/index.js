@@ -27,7 +27,7 @@ mongoose.connect('mongodb+srv://manikrishna9970:manikrishna9970@nani.8rxselx.mon
 app.use(bodyParser.json())
 
 app.use(cors({
-  origin: 'https://movie-ticket-booking-eight.vercel.app', // Replace with your frontend URL
+  origin: 'https://book-karo-five.vercel.app/', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
 }));
